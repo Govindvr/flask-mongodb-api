@@ -40,19 +40,3 @@ class UserApi(Resource):
         collection.delete_one({'_id':id})
         return {'message': 'User deleted successfully'}
     
-
-
-    """
-       {
-        "_id": 1,
-        "name": "Danny",
-        "email": "danny@email.com",
-        "password": "fuhfbd"
-    },
-    {
-        "_id": 2,
-        "name": "Das",
-        "email": "das@hello.com",
-        "password": "sdhbcsc"
-    },
-    """
