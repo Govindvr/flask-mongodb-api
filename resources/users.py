@@ -5,50 +5,6 @@ from flask_restful import Resource
 
 users = Blueprint('users', __name__)
 
-# @users.route('/')
-# def index():
-#     return 'Hello World'
-
-# @users.route('/users',methods=['GET'])
-# def get_users():
-#     users = list(collection.find())
-#     return jsonify(users)
-
-# @users.route('/users/<int:id>',methods=['GET'])
-# def get_user_id(id):
-    
-#     user = collection.find_one({'_id':id})
-#     print(user)
-#     return jsonify(user)
-
-# @users.route('/users',methods=['POST'])
-# def create_user():
-#     data = request.get_json()
-#     data = request.get_json()
-#     try:
-#         validation = jsonschema.validate(data, user_schema)
-#         if validation is None:
-#             collection.insert_one(data)
-#             return jsonify({'message': 'User created successfully'})
-#     except jsonschema.exceptions.ValidationError as e:
-#         return jsonify({'message': 'Validation failed {}'.format(e)})
-
-# @users.route('/users/<int:id>',methods=['PUT'])
-# def update_user(id):
-#     data = request.get_json()
-#     try:
-#         validation = jsonschema.validate(data, user_schema)
-#         if validation is None:
-#             collection.update_one({'_id':id},{'$set':data})
-#             return jsonify({'message': 'User Updated successfully'})
-#     except jsonschema.exceptions.ValidationError as e:
-#         return jsonify({'message': 'Validation failed {}'.format(e)})
-    
-# @users.route('/users/<int:id>',methods=['DELETE'])
-# def delete_user(id):
-#     collection.delete_one({'_id':id})
-#     return jsonify({'message': 'User deleted successfully'})
-
 class UsersApi(Resource):
     def get(self):
         users = list(collection.find())
