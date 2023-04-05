@@ -7,7 +7,7 @@ Python version used : `3.10.6`
 1. Clone the repository
 2. Create a virtual environment
 3. Install the requirements
-4. Create a `.env` file and add the following variables
+4. Create a `.env` file inside `resources` folder and add the following variables
 ```bash
 MONGO_URI=<your_mongo_uri>
 MONGO_DB_NAME=<your_mongo_dbname>
