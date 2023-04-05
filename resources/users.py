@@ -27,7 +27,6 @@ class UserApi(Resource):
     
     def put(self,id):
         data = request.get_json()
-        print(data)
         try:
             validation = jsonschema.validate(data, user_schema)
             if validation is None:
